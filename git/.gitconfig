@@ -10,4 +10,4 @@
 	default = current
 [core]
 	editor = nvim
-  excludesfile = ~/.global-gitignored
+  	excludesfile = ~/.global-gitignored
