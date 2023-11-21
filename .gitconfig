@@ -10,12 +10,4 @@
 	default = current
 [core]
 	editor = nvim
-  excludesfile = ~/.global-git-ignore
-[fetch]
-  prune = true
-[diff]
-  tool = vimdiff
-[difftool]
-  cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
-
-
+  excludesfile = ~/.global-gitignored
