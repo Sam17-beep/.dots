@@ -1,0 +1,21 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Samuel Grenier
+	email = 78397416+Sam17-beep@users.noreply.github.com
+[push]
+	default = current
+[core]
+	editor = nvim
+  excludesfile = ~/.global-git-ignore
+[fetch]
+  prune = true
+[diff]
+  tool = vimdiff
+[difftool]
+  cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
+
+
