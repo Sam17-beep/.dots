@@ -19,17 +19,6 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
   { 'folke/which-key.nvim',  opts = {} },
-  {
-    'nvim-lualine/lualine.nvim',
-    opts = {
-      options = {
-        icons_enabled = false,
-        theme = 'onedark',
-        component_separators = '|',
-        section_separators = '',
-      },
-    },
-  },
   { 'numToStr/Comment.nvim', opts = {} },
   { import = 'plugins' }
 }, {})
