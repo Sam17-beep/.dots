@@ -54,20 +54,22 @@ return {
       window = {
         position = 'right',
       },
-      filtered_items = {
-        visible = false, -- when true, they will just be displayed differently than normal items
-        hide_dotfiles = false,
-        hide_gitignored = true,
-        hide_by_name = {
-          '.DS_Store',
-          'node_modules',
-          '.git',
-        },
-        always_show = { -- remains visible even if other settings would normally hide it
-          '.gitignore',
-        },
-        never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
-          '.DS_Store',
+      filesystem = {
+        filtered_items = {
+          visible = false,
+          hide_dotfiles = false,
+          hide_gitignored = true,
+          hide_by_name = {
+            '.DS_Store',
+            'node_modules',
+            '.git',
+          },
+          always_show = { -- remains visible even if other settings would normally hide it
+            '.gitignore',
+          },
+          never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
+            '.DS_Store',
+          },
         },
       },
     },
