@@ -43,7 +43,6 @@ return {
 
         -- Lesser used LSP functionality
         nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
-
       end
 
       -- document existing key chains
@@ -66,7 +65,7 @@ return {
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
-        -- rust_analyzer = {},
+        rust_analyzer = { check = { command = 'clippy' }, diagnostics = { enable = true } },
         -- tsserver = {},
         -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
@@ -102,7 +101,6 @@ return {
           }
         end,
       }
-    end
-  }
-
+    end,
+  },
 }
