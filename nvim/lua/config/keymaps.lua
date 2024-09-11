@@ -13,8 +13,9 @@ keymap.set("n", "<C-\\>", "<Cmd>NvimTmuxNavigateLastActive<CR>", { silent = true
 keymap.set("n", "<C-Space>", "<Cmd>NvimTmuxNavigateNavigateNext<CR>", { silent = true })
 
 -- Borderless terminal
-vim.keymap.set("n", "<C-_>", function()
-  Util.terminal(nil, { border = "rounded" })
+keymap.del({ "n", "v" }, "t")
+vim.keymap.set("n", "t", function()
+  Util.terminal(nil, { border = "rounded", esc_esc = true })
 end, { desc = "Term with border" })
 
 -- Borderless lazygit
