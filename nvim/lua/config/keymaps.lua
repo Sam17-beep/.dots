@@ -13,14 +13,13 @@ keymap.set("n", "<C-\\>", "<Cmd>NvimTmuxNavigateLastActive<CR>", { silent = true
 keymap.set("n", "<C-Space>", "<Cmd>NvimTmuxNavigateNavigateNext<CR>", { silent = true })
 
 -- Borderless terminal
-keymap.del({ "n", "v" }, "t")
-vim.keymap.set("n", "t", function()
+vim.keymap.set("n", "tt", function()
   Util.terminal(nil, { border = "rounded", esc_esc = true })
 end, { desc = "Term with border" })
 
 -- Borderless lazygit
 vim.keymap.set("n", "<leader>gg", function()
-  Util.terminal({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false, border = "none" })
+  Util.terminal({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false, border = "rounded" })
 end, { desc = "Lazygit (root dir)" })
 
 keymap.del({ "n", "i", "v" }, "<A-j>")
@@ -76,4 +75,19 @@ set_keymap(
   "<leader>cpc",
   "<cmd>lua require('package-info').change_version()<cr>",
   { silent = true, noremap = true, desc = "Change package version" }
+)
+
+-- java keymaps
+set_keymap("n", "<leader>jr", "<cmd>JavaRunnerRunMain<cr>", { silent = true, noremap = true, desc = "Run Java main" })
+set_keymap(
+  "n",
+  "<leader>jt",
+  "<cmd>JavaRunnerToggleLogs<cr>",
+  { silent = true, noremap = true, desc = "Toggle Java logs" }
+)
+set_keymap(
+  "n",
+  "<leader>js",
+  "<cmd>JavaRunnerStopMain<cr>",
+  { silent = false, noremap = true, desc = "Stop Java Main" }
 )
