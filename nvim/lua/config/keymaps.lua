@@ -78,10 +78,10 @@ set_keymap(
 )
 
 -- java keymaps
-set_keymap("n", "<leader>jr", "<cmd>JavaRunnerRunMain<cr>", { silent = true, noremap = true, desc = "Run Java main" })
+set_keymap("n", "<leader>jj", "<cmd>JavaRunnerRunMain<cr>", { silent = true, noremap = true, desc = "Run Java main" })
 set_keymap(
   "n",
-  "<leader>jt",
+  "<leader>jf",
   "<cmd>JavaRunnerToggleLogs<cr>",
   { silent = true, noremap = true, desc = "Toggle Java logs" }
 )
@@ -90,4 +90,16 @@ set_keymap(
   "<leader>js",
   "<cmd>JavaRunnerStopMain<cr>",
   { silent = false, noremap = true, desc = "Stop Java Main" }
+)
+set_keymap(
+  "n",
+  "<leader>jt",
+  "<cmd>JavaTestRunCurrentClass<cr>",
+  { silent = true, noremap = true, desc = "Run Java test" }
+)
+set_keymap(
+  "n",
+  "<leader>jr",
+  "<cmd>JavaTestViewLastReport<cr>",
+  { silent = true, noremap = true, desc = "Show last test report" }
 )
