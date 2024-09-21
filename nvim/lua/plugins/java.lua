@@ -1,6 +1,5 @@
 return {
   "nvim-java/nvim-java",
-  ft = "java",
   config = false,
   dependencies = {
     {
