@@ -12,10 +12,6 @@ return {
                 configuration = {
                   runtimes = {
                     {
-                      name = "JavaSE-18",
-                      path = "/Users/sam/.asdf/installs/java/openjdk-18",
-                    },
-                    {
                       name = "JavaSE-21",
                       path = "/Users/sam/.asdf/installs/java/openjdk-21",
                     },
