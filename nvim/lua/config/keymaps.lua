@@ -106,3 +106,6 @@ set_keymap(
   "<cmd>JavaTestViewLastReport<cr>",
   { silent = true, noremap = true, desc = "Show last test report" }
 )
+
+-- debug keymaps
+set_keymap("n", "<leader>dd", "<cmd>DapNew<cr>", { silent = true, noremap = true, desc = "Start Debug" })

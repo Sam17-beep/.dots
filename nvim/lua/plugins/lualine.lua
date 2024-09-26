@@ -24,7 +24,6 @@ return {
 
     return {
       options = {
-        theme = "cyberdream",
         globalstatus = true,
         disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
       },
