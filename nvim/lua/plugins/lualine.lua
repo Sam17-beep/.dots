@@ -43,10 +43,6 @@ return {
             },
           },
           { Util.lualine.pretty_path() },
-          {
-            require("package-info").get_status,
-            color = Util.ui.fg("Statement"),
-          },
         },
         lualine_x = {
           { git_blame.get_current_blame_text, cond = git_blame.is_blame_text_available },

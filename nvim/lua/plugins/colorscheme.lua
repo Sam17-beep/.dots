@@ -7,6 +7,7 @@ return {
       opts.transparent = true
       opts.italic_comments = true
       opts.borderless_telescope = false
+      opts.hide_fillchars = true
     end,
   },
   {
@@ -27,4 +28,5 @@ return {
     },
   },
   { "EdenEast/nightfox.nvim", priority = 1000, lazy = false, opts = { transparent = true } },
+  { "rose-pine/neovim", name = "rose-pine", variant = "moon", opts = { styles = { transparency = true } } },
 }

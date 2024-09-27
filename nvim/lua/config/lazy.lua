@@ -64,5 +64,6 @@ require("lazy").setup({
   },
 })
 
+vim.o.cursorline = false
 vim.opt.termguicolors = true
 vim.cmd("colorscheme cyberdream")
