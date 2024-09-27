@@ -1,6 +1,7 @@
 return {
   {
     "lukas-reineke/virt-column.nvim",
+    enabled = false,
     opts = {
       char = { "┆" },
       virtcolumn = "120",
@@ -38,6 +39,7 @@ return {
       end,
     },
   },
+
   -- filename
   {
     "b0o/incline.nvim",
@@ -45,12 +47,6 @@ return {
     priority = 1200,
     config = function()
       require("incline").setup({
-        highlight = {
-          groups = {
-            InclineNormal = { guibg = "#303270", guifg = "#a9b1d6" },
-            InclineNormalNC = { guibg = "none", guifg = "#a9b1d6" },
-          },
-        },
         window = { margin = { vertical = 0, horizontal = 1 } },
         hide = { cursorline = true },
         render = function(props)
