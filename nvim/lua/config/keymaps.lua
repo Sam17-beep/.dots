@@ -29,18 +29,15 @@ keymap.del("n", "<C-Down>")
 keymap.del("n", "<C-Up>")
 keymap.del("n", "<C-Right>")
 
-keymap.set("n", "<M-h>", '<Cmd>lua require("tmux").resize_left()<CR>', { silent = true })
-keymap.set("n", "<M-j>", '<Cmd>lua require("tmux").resize_bottom()<CR>', { silent = true })
-keymap.set("n", "<M-k>", '<Cmd>lua require("tmux").resize_top()<CR>', { silent = true })
-keymap.set("n", "<M-l>", '<Cmd>lua require("tmux").resize_right()<CR>', { silent = true })
-
 local set_keymap = vim.api.nvim_set_keymap
 
 -- Split windows
 keymap.set("n", "ss", ":vsplit<Return>", opts)
 keymap.set("n", "sv", ":split<Return>", opts)
+keymap.set("n", "<S-h>", ":vertical resize +5<Return>", opts)
+keymap.set("n", "<S-l>", ":vertical resize -5<Return>", opts)
 
--- Tabs
+-- Tabsh key-notation
 keymap.set("n", "te", ":tabedit", opts)
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
