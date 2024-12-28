@@ -1,12 +1,9 @@
-import = ["~/.config/alacritty/cyberdream.toml"]
-
-# [ env ]
-# TERM = "xterm-256color"
+ import = ["~/.config/alacritty/rosepine.toml"]
 
 [window]
 
-opacity = 0.7
-blur = true
+ # blur = true
+ # opacity = 0.7
 
 padding.x = 10
 padding.y = 10
@@ -14,5 +11,5 @@ padding.y = 10
 decorations = "Buttonless"
 
 [font]
-normal.family = "Hack Nerd Font"
-size = 12.0
+normal = {family="Hack Nerd Font", style="Regular"}
+size = 12.4

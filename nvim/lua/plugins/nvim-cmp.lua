@@ -8,6 +8,9 @@ return {
     "hrsh7th/cmp-path",
   },
   opts = {
+    experimental = {
+      ghost_text = false,
+    },
     completion = {
       completeopt = "menu,menuone,noselect",
     },

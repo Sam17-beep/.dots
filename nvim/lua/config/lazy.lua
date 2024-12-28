@@ -13,8 +13,8 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import any extras modules here
-    { import = "lazyvim.plugins.extras.coding.copilot" },
-    { import = "lazyvim.plugins.extras.coding.copilot-chat" },
+    -- { import = "lazyvim.plugins.extras.coding.copilot" },
+    -- { import = "lazyvim.plugins.extras.coding.copilot-chat" },
     { import = "lazyvim.plugins.extras.dap.core" },
     { import = "lazyvim.plugins.extras.editor.aerial" },
     { import = "lazyvim.plugins.extras.editor.harpoon2" },
@@ -47,7 +47,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  checker = { enabled = true }, -- automatically check for plugin updates
+  checker = { enabled = false }, -- automatically check for plugin updates
   performance = {
     rtp = {
       -- disable some rtp plugins
@@ -64,6 +64,32 @@ require("lazy").setup({
   },
 })
 
+vim.lsp.handlers["textDocument/hover"] = function(_, result, ctx, config)
+  config = config
+    or {
+      border = {
+        { "╭", "Comment" },
+        { "─", "Comment" },
+        { "╮", "Comment" },
+        { "│", "Comment" },
+        { "╯", "Comment" },
+        { "─", "Comment" },
+        { "╰", "Comment" },
+        { "│", "Comment" },
+      },
+    }
+  config.focus_id = ctx.method
+  if not (result and result.contents) then
+    return
+  end
+  local markdown_lines = vim.lsp.util.convert_input_to_markdown_lines(result.contents)
+  markdown_lines = vim.lsp.util.trim_empty_lines(markdown_lines)
+  if vim.tbl_isempty(markdown_lines) then
+    return
+  end
+  return vim.lsp.util.open_floating_preview(markdown_lines, "markdown", config)
+end
+
 vim.o.cursorline = false
 vim.opt.termguicolors = true
-vim.cmd("colorscheme cyberdream")
+vim.cmd("colorscheme rose-pine")

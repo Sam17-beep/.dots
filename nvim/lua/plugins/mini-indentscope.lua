@@ -4,16 +4,6 @@ return {
     main = "ibl",
     event = "LazyFile",
     opts = function()
-      LazyVim.toggle.map("<leader>ue", {
-        name = "Indention Guides",
-        get = function()
-          return require("ibl.config").get_config(0).enabled
-        end,
-        set = function(state)
-          require("ibl").setup_buffer(0, { enabled = state })
-        end,
-      })
-
       return {
         indent = {
           -- See more characters at :h ibl.config.indent.char
