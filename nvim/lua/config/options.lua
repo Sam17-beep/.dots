@@ -12,9 +12,15 @@ opt.background = "dark"
 
 vim.g.root_spec = { "cwd" }
 vim.g.omni_sql_no_default_maps = 1
-vim.g.python3_host_prog = "/opt/homebrew/bin/python3"
 
 vim.lsp.inlay_hints = false
 
 -- turn off swapfile
 opt.swapfile = false
+
+vim.g.lazyvim_picker = "telescope"
+opt.completeopt = "menu,menuone,noselect"
+opt.scrolloff = 8
+
+vim.g.lazyvim_python_lsp = "pyright"
+vim.g.lazyvim_python_ruff = "ruff"
