@@ -1,4 +1,3 @@
- import = ["~/.config/alacritty/rosepine.toml"]
 
 [window]
 
@@ -11,5 +10,8 @@ padding.y = 10
 decorations = "Buttonless"
 
 [font]
-normal = {family="Hack Nerd Font", style="Regular"}
+normal = {family="Hack Nerd Font Mono", style="Regular"}
 size = 12.4
+
+[general]
+ import = ["~/.config/alacritty/rosepine.toml"]
